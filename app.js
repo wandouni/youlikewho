@@ -936,7 +936,6 @@ function renderResult() {
   const ranked = rankResults(scores);
   const [result, second, third] = ranked;
   const similar = [result, second, third];
-  const wechat = isWeChatBrowser();
   track("view", { page: "result", resultId: result.id });
 
   setView(`
@@ -949,7 +948,6 @@ function renderResult() {
             <p class="hero-copy result-ref">历史气质参考：${result.refs}</p>
             <div class="tag-row">${result.keywords.map((keyword) => `<span class="tag">${keyword}</span>`).join("")}</div>
           </div>
-          <div class="result-watermark" aria-hidden="true">HERITAGE</div>
           <div class="result-summary-metrics">
             <div class="match-badge" aria-label="匹配度 ${result.match}%">
               <span><strong>${result.match}%</strong>匹配度</span>
@@ -985,11 +983,6 @@ function renderResult() {
           </section>
         </div>
 
-        ${
-          wechat
-            ? `<div class="wechat-share-note">微信内可截图结果卡片，或点右上角菜单转发。</div>`
-            : ""
-        }
         <div class="result-actions">
           <button class="secondary-button" type="button" data-action="retake">重新测试</button>
         </div>
