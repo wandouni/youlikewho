@@ -1514,13 +1514,17 @@ body[data-view="result"] .toast {
   }
 
   .result-poster-grid {
+    flex: 0 0 auto;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, minmax(0, 1fr)) auto;
+    grid-template-rows: none;
+    grid-auto-rows: min-content;
+    align-content: start;
     gap: 6px;
     padding: 0 22px 8px;
   }
 
   .poster-block {
+    align-self: start;
     padding: 7px 10px;
   }
 
@@ -1537,9 +1541,9 @@ body[data-view="result"] .toast {
     display: -webkit-box;
     overflow: hidden;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 4;
     font-size: 0.64rem;
-    line-height: 1.32;
+    line-height: 1.28;
   }
 
   .poster-block-similar p {
@@ -1571,6 +1575,12 @@ body[data-view="result"] .toast {
   body[data-view="result"] .toast {
     padding: 0 22px 4px;
     font-size: 0.72rem;
+  }
+}
+
+@media (max-width: 560px) and (min-height: 740px) {
+  .poster-block p {
+    -webkit-line-clamp: 5;
   }
 }
 
