@@ -528,6 +528,7 @@ const RESULT_COPY = new Map([
 
 const STORAGE_KEY = "ancient-survival-quiz-state";
 const ANALYTICS_KEY = "ancient-survival-quiz-analytics";
+const CSJ_SDK_DOC_URL = "https://www.csjplatform.com/supportcenter/5395";
 const app = document.querySelector("#app");
 let state = loadState();
 let returnView = "home";
@@ -663,6 +664,17 @@ function renderQuiz() {
           <button class="secondary-button" type="button" data-action="prev" ${index === 0 ? "disabled" : ""}>上一题</button>
           <span class="muted quiz-hint">选后自动下一题，可返回修改。</span>
         </div>
+        <aside class="quiz-ad-card" aria-label="广告">
+          <div
+            id="csj-quiz-bottom-ad"
+            class="csj-ad-slot"
+            data-provider="bytedance-csj"
+            data-sdk-doc="${CSJ_SDK_DOC_URL}"
+          >
+            <span class="ad-label">广告</span>
+            <span class="ad-state">字节跳动 SDK 广告位</span>
+          </div>
+        </aside>
       </div>
     </section>
   `);

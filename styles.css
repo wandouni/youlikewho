@@ -667,6 +667,47 @@ body[data-view="home"] #app {
   font-size: 0.86rem;
 }
 
+.quiz-ad-card {
+  margin-top: 12px;
+}
+
+.csj-ad-slot {
+  min-height: 64px;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+  padding: 10px 12px;
+  border: 1px dashed rgba(58, 46, 44, 0.18);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(90deg, rgba(128, 21, 11, 0.045), rgba(255, 255, 255, 0.44)),
+    rgba(255, 255, 255, 0.46);
+  color: rgba(58, 46, 44, 0.58);
+  font-family: "Source Sans 3", "PingFang SC", sans-serif;
+}
+
+.ad-label {
+  min-width: 38px;
+  min-height: 24px;
+  display: inline-grid;
+  place-items: center;
+  border: 1px solid rgba(128, 21, 11, 0.28);
+  border-radius: var(--radius);
+  color: var(--cinnabar);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.ad-state {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
 .result-wrap,
 .plain-wrap {
   padding: clamp(28px, 5vw, 62px) 0;
@@ -1241,6 +1282,25 @@ body[data-view="home"] #app {
 
   .quiz-actions .muted {
     text-align: right;
+  }
+
+  .quiz-ad-card {
+    margin-top: 8px;
+  }
+
+  .csj-ad-slot {
+    min-height: 52px;
+    padding: 8px 10px;
+  }
+
+  .ad-label {
+    min-width: 34px;
+    min-height: 22px;
+    font-size: 0.66rem;
+  }
+
+  .ad-state {
+    font-size: 0.74rem;
   }
 
   .result-wrap,
